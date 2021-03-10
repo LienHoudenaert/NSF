@@ -1,0 +1,36 @@
+TASK
+
+As a system engineer your expertise is asked to create a firewall ruleset for a hosting server.
+The server is provided with the following services: Apache, ProFTPd and bind9. Please, do not allow zonetransfers (think twice). Also protect the server against ping flooding. The server is not allowed to make outgoing connections, except for the installation of security updates.
+
+1) Provided server with following services: Apache, ProFTPd and bind9
+
+$ sudo apt-get update
+$ sudo apt-get upgrade
+
+Install apache2:
+
+$ sudo apt-get install apache2
+
+Install ProFTPD:
+
+$ sudo apt-get install proftpd
+$ sudo nano /etc/proftpd/proftpd.conf
+
+In /etc/proftpd/proftpd.conf file:
+
+-	ServerName: Make it your default server name.
+- UseIPV6: You may switch it to “Off“, if you don’t use it.
+- DefaultRoot : Uncomment this line to restrict users with their home folders.
+- RequireValidShell: Uncomment this line and make it “On” to enable logging in for users, even for those who doesn’t have a valid shell in /etc/shells to log in.
+- AuthOrder: Uncomment the line to enable the using of local passwords.
+
+Save and close file.
+
+$ sudo systemctl restart proftpd
+$ sudo passwd proftpd
+
+Install bind9:
+
+$ sudo apt-get install bind9 dnsutils -y
+Further configuration can be found by clicking on following link: https://github.com/LienHoudenaert/NSF/wiki/Steps-to-not-allow-zonetranfers
