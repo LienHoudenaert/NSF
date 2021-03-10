@@ -8,6 +8,9 @@ After the setup of the server following iptables rules need to be added.
 1) Do not allow zonetransfer:
 https://www.cyberciti.biz/tips/howto-restrict-unauthorized-zone-transfers-dns-bind.html
 
+More detailed setup and configuration to test can be found at the page below:
+https://github.com/LienHoudenaert/NSF/wiki/Steps-to-not-allow-zonetranfers
+
 $ sudo nano /etc/bind/named.conf
 
 Add following rule to zone to block zonetranfers:
