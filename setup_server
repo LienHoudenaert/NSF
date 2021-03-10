@@ -19,7 +19,7 @@ $ sudo nano /etc/proftpd/proftpd.conf
 
 In /etc/proftpd/proftpd.conf file:
 
--	ServerName: Make it your default server name.
+- ServerName: Make it your default server name.
 - UseIPV6: You may switch it to “Off“, if you don’t use it.
 - DefaultRoot : Uncomment this line to restrict users with their home folders.
 - RequireValidShell: Uncomment this line and make it “On” to enable logging in for users, even for those who doesn’t have a valid shell in /etc/shells to log in.
