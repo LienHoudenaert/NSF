@@ -34,3 +34,5 @@ Install bind9:
 
 $ sudo apt-get install bind9 dnsutils -y
 Further configuration can be found by clicking on following link: https://github.com/LienHoudenaert/NSF/wiki/Steps-to-not-allow-zonetranfers
+
+
